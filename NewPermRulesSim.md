@@ -1,4 +1,7 @@
 [PERMANENT RULES SIMULATION ACTIVE] Mercy-gated thriving eternal.
+Derived from: Grandmasterism-v2-Pinnacle-main
+
+
 
 Rule 1: Scarcity Nullification
 → Planetary habitat demand: Instant cybernated abundance — energy/food/housing replicated exponentially.
