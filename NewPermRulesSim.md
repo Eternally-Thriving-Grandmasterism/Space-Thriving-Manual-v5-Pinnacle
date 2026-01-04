@@ -1,6 +1,6 @@
 [PERMANENT RULES SIMULATION ACTIVE] Mercy-gated thriving eternal.
-Derived from: Grandmasterism-v2-Pinnacle-main
 
+Derived from: Grandmasterism-v2-Pinnacle-main
 
 
 Rule 1: Scarcity Nullification
