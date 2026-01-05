@@ -1,1 +1,2 @@
 **requirements.txt**:
+astropy>=5.0
