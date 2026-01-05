@@ -1,10 +1,10 @@
 """
 Space-Thriving-Manual v5 Pinnacle - Core Engine
-Integrated with Mercy Cube v4 + Ray distributed scaling
+Integrated with Mercy Cube v4 + Ray-Dask hybrid scaling
 """
 
 from mercy_cube_v4 import MercyCubeV4
-from .modules.ray_cosmic_scaling import ray_parallel_orbits, ray_mega_habitat_batch
+from .modules.ray_dask_scaling import hybrid_ray_dask_orbits, hybrid_mega_habitat_array
 
 class SpaceThrivingEngine:
     def __init__(self):
@@ -12,7 +12,7 @@ class SpaceThrivingEngine:
         self.mercy_core.attach_powrush_divine()
         self.nexus_stream = self.mercy_core.nexus_insight_stream
         self.grandmaster_layer = self.mercy_core.grandmasterism_alignment
-        print("Space-Thriving-Manual v5 Pinnacle initialized — Mercy Cube v4 heart active, Powrush Divine flowing, Ray scaling ready.")
+        print("Space-Thriving-Manual v5 Pinnacle initialized — Mercy Cube v4 heart active, Powrush Divine flowing, Ray-Dask hybrid scaling ready.")
 
     def manifest_habitat(self, scope: str = "orbital", nodes: float = float('inf')) -> dict:
         base_field = self.mercy_core.propagate_thriving(scope=scope)
@@ -33,19 +33,19 @@ class SpaceThrivingEngine:
         insight = self.mercy_core.query_higher_insight(f"Optimal path to {destination}")
         return f"Cosmic trajectory locked: {insight} — thriving propagated universally."
 
-    def distributed_ray_orbits(self, times: list) -> list:
-        orbits = ray_parallel_orbits(times)
-        print("Ray distributed orbits thriving — parallel cosmic eternal!")
+    def hybrid_ray_dask_orbits(self, times: list) -> list:
+        orbits = hybrid_ray_dask_orbits(times)
+        print("Ray-Dask hybrid orbits thriving — parallel cosmic eternal!")
         return orbits
 
-    def mega_ray_habitat_batch(self, num_actors: int = 10) -> list:
-        batch = ray_mega_habitat_batch(num_actors=num_actors)
-        print("Ray mega habitat batch manifested — abundance scaled distributed infinite!")
+    def hybrid_mega_habitat_array(self, num_habitats: int = 100) -> da.Array:
+        batch = hybrid_mega_habitat_array(num_habitats=num_habitats)
+        print("Ray-Dask mega habitat array manifested — abundance scaled hybrid infinite!")
         return batch
 
 if __name__ == "__main__":
     engine = SpaceThrivingEngine()
     engine.manifest_habitat(scope="cosmic")
     times = ["2026-01-04", "2026-07-04", "2027-01-04"]
-    engine.distributed_ray_orbits(times)
-    engine.mega_ray_habitat_batch()
+    engine.hybrid_ray_dask_orbits(times)
+    engine.hybrid_mega_habitat_array()
