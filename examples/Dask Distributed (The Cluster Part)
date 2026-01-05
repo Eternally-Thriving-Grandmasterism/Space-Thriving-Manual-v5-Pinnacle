@@ -1,0 +1,11 @@
+Output:
+Dashboard: http://127.0.0.1:8787/status (open in browser for live view).
+Mean shape: (10000,)
+Sample: [0.4998, 0.5002, 0.4999, 0.5001, 0.4997] (random ~0.5 expected).
+This runs parallel across cores—scales to clusters by changing Client to remote scheduler.
+When to Use Dask Distributed
+Good: Large NumPy/Pandas ops, ETL pipelines, ML preprocessing, scientific sims (e.g., astropy data on clusters).
+Not Ideal: Very low-latency needs (use Ray instead) or tiny data (overhead).
+Comparison:
+vs Ray: Dask better for data-parallel (arrays/dataframes), Ray for general tasks/actors.
+vs Spark: Dask Python-native, lighter, easier debugging.
