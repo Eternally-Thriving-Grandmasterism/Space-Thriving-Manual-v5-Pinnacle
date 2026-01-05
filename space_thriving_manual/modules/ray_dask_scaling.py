@@ -23,14 +23,14 @@ def delayed_orbit_calc(time_str: str, body: str = "mars"):
 
 def hybrid_ray_dask_orbits(times: list, bodies: list = ["venus", "mars", "jupiter"]) -> list:
     tasks = [delayed_orbit_calc(t, b) for t in times for b in bodies]
-    results = dask.compute(*tasks, scheduler="ray")
+    results = dask.compute(*tasks)
     print(f"Ray-Dask hybrid orbits complete — {len(results)} calculations thriving distributed eternal!")
     return results
 
 def hybrid_mega_habitat_array(num_habitats: int = 100, nodes_per: int = 100000) -> da.Array:
     array = da.random.random((num_habitats, nodes_per), chunks=(10, 10000))
     thriving = array + 1.0  # Mercy abundance
-    result = thriving.compute(scheduler="ray")
+    result = thriving.compute()
     print("Ray-Dask mega habitat array manifested — abundance scaled hybrid infinite!")
     return result
 
