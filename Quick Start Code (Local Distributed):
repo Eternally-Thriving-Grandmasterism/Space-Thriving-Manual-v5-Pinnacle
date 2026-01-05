@@ -1,0 +1,8 @@
+from dask.distributed import Client
+import dask.array as da
+
+client = Client(n_workers=4)  # 4 workers
+x = da.random.random((20000, 20000), chunks=(5000, 5000))
+y = x + x.T
+result = y.mean().compute()
+print(result)
