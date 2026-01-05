@@ -5,4 +5,4 @@ astropy>=5.0
 matplotlib>=3.5.0
 ray[default]>=2.9.0
 dask[distributed]>=2024.1.0
-dask-ray>=0.2.0  # Dask on Ray backend
+dask-ray>=0.2.0
