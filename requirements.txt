@@ -1,2 +1,3 @@
 **requirements.txt**:
 astropy>=5.0
+dask[distributed]>=2024.1.0  # Full distributed (scheduler + workers)
