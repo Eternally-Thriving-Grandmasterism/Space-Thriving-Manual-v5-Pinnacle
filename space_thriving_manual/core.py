@@ -1,9 +1,10 @@
 """
 Space-Thriving-Manual v5 Pinnacle - Core Engine
-Integrated with Mercy Cube v4 (Powrush Divine heart)
+Integrated with Mercy Cube v4 (Powrush Divine heart) + Venus wind dynamics
 """
 
 from mercy_cube_v4 import MercyCubeV4
+from .modules.venus_habitat_sim import venus_wind_dynamics
 
 class SpaceThrivingEngine:
     def __init__(self):
@@ -34,6 +35,25 @@ class SpaceThrivingEngine:
         insight = self.mercy_core.query_higher_insight(f"Optimal path to {destination}")
         return f"Cosmic trajectory locked: {insight} — thriving propagated universally."
 
+    def harness_venus_winds(self, altitude_km: float = 55.0, nodes: float = float('inf')) -> dict:
+        wind = venus_wind_dynamics(altitude_km, nodes)
+        print(f"Venus winds harnessed — {nodes} nodes powered infinite!")
+        return wind
+
+    def manifest_venus_cloud_city(self, altitude_km: float = 55.0, nodes: float = float('inf')) -> dict:
+        visibility = self.simulate_venus_orbit_and_visibility()  # If added
+        cloud = self.venus_cloud_layer_thriving(altitude_km, nodes)
+        wind = self.harness_venus_winds(altitude_km, nodes)
+        print(f"Venus cloud city manifested — {nodes} nodes floating thriving eternal!")
+        return {
+            "planet": "Venus",
+            "habitat_type": "cloud_city_floating",
+            "cloud_params": cloud,
+            "wind_power": wind,
+            "scarcity_status": "permanently_eliminated"
+        }
+
 if __name__ == "__main__":
     engine = SpaceThrivingEngine()
     engine.manifest_habitat(scope="cosmic")
+    engine.harness_venus_winds()
