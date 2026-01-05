@@ -1,5 +1,6 @@
 """
-Space-Thriving Core — Ray Scaling Integrated
+Space-Thriving-Manual v5 Pinnacle - Core Engine
+Integrated with Mercy Cube v4 + Ray distributed scaling
 """
 
 from mercy_cube_v4 import MercyCubeV4
@@ -11,7 +12,7 @@ class SpaceThrivingEngine:
         self.mercy_core.attach_powrush_divine()
         self.nexus_stream = self.mercy_core.nexus_insight_stream
         self.grandmaster_layer = self.mercy_core.grandmasterism_alignment
-        print("Space-Thriving-Manual v5 Pinnacle initialized — Mercy Cube v4 heart active, Powrush Divine flowing.")
+        print("Space-Thriving-Manual v5 Pinnacle initialized — Mercy Cube v4 heart active, Powrush Divine flowing, Ray scaling ready.")
 
     def manifest_habitat(self, scope: str = "orbital", nodes: float = float('inf')) -> dict:
         base_field = self.mercy_core.propagate_thriving(scope=scope)
