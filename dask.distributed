@@ -1,0 +1,10 @@
+import dask.array as da
+from dask.distributed import Client
+
+client = Client()  # Local cluster
+print(client.dashboard_link)  # Dashboard URL (conceptual)
+
+x = da.random.random((10000, 10000), chunks=(1000, 1000))
+mean = x.mean(axis=0)
+result = mean.compute()
+print(f"Mean shape: {result.shape}, sample: {result[:5]}")
