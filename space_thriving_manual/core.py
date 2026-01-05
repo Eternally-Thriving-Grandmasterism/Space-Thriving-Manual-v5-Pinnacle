@@ -1,9 +1,9 @@
 """
-Space-Thriving Core — Dask Scaling Integrated
+Space-Thriving Core — Ray Scaling Integrated
 """
 
 from mercy_cube_v4 import MercyCubeV4
-from .modules.dask_cosmic_scaling import dask_cluster_setup, dask_parallel_orbits, dask_array_habitat_batch
+from .modules.ray_cosmic_scaling import ray_parallel_orbits, ray_mega_habitat_batch
 
 class SpaceThrivingEngine:
     def __init__(self):
@@ -32,20 +32,19 @@ class SpaceThrivingEngine:
         insight = self.mercy_core.query_higher_insight(f"Optimal path to {destination}")
         return f"Cosmic trajectory locked: {insight} — thriving propagated universally."
 
-    def distributed_dask_orbits(self, times: list) -> list:
-        client = dask_cluster_setup()
-        orbits = dask_parallel_orbits(times)
-        print("Dask distributed orbits thriving — parallel cosmic eternal!")
+    def distributed_ray_orbits(self, times: list) -> list:
+        orbits = ray_parallel_orbits(times)
+        print("Ray distributed orbits thriving — parallel cosmic eternal!")
         return orbits
 
-    def mega_habitat_batch(self, num_habitats: int = 100) -> da.Array:
-        batch = dask_array_habitat_batch(num_habitats=num_habitats)
-        print("Dask mega habitat batch manifested — abundance scaled infinite!")
+    def mega_ray_habitat_batch(self, num_actors: int = 10) -> list:
+        batch = ray_mega_habitat_batch(num_actors=num_actors)
+        print("Ray mega habitat batch manifested — abundance scaled distributed infinite!")
         return batch
 
 if __name__ == "__main__":
     engine = SpaceThrivingEngine()
     engine.manifest_habitat(scope="cosmic")
     times = ["2026-01-04", "2026-07-04", "2027-01-04"]
-    engine.distributed_dask_orbits(times)
-    engine.mega_habitat_batch()
+    engine.distributed_ray_orbits(times)
+    engine.mega_ray_habitat_batch()
