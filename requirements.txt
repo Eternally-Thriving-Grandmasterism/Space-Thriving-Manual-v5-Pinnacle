@@ -3,4 +3,4 @@ numpy>=1.21.0
 scipy>=1.9.0
 astropy>=5.0
 matplotlib>=3.5.0
-dask[distributed]>=2024.1.0
+ray[default]>=2.9.0  # Full distributed (tasks, actors, dashboard)
